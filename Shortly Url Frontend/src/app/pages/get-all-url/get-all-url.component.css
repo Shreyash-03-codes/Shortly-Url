@@ -1,0 +1,122 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #cc7cbc, #7979db);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.url-container {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Table Wrapper for horizontal scroll */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table styling */
+.url-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Ensures it scrolls on small screens */
+}
+
+.url-table th, .url-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.url-table th {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Row hover effect */
+.url-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Links */
+.url-table a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.url-table a:hover {
+  color: #ffd;
+}
+
+/* Error and loading */
+.error, .loading {
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+/* Copy button */
+.copy-btn {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 0.8rem;
+}
+
+.copy-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .url-table th, .url-table td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  .copy-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .url-container {
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .url-table th, .url-table td {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  .copy-btn {
+    margin-left: 0.25rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+}
